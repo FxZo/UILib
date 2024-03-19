@@ -1,7 +1,7 @@
 
 do  
 	local ui = game:GetService("CoreGui"):FindFirstChild("UILibrary") 
-	 if ui then 
+	if ui then 
 		ui:Destroy() 
 	end 
 end
@@ -377,26 +377,6 @@ function library:Destroy()
 	library:Destroy()
 end
 
-local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-		
-ScreenGui.Name = "ImageButton"
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
-ImageButton.Size = UDim2.new(0, 50, 0, 50)
-ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=".._G.Logo
-ImageButton.MouseButton1Down:connect(function()
-	game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
-	game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
-end)
-UICorner.Parent = ImageButton
 
 
 function library:Evil(text,text2,logo)
@@ -422,17 +402,17 @@ function library:Evil(text,text2,logo)
 	Main.AnchorPoint = Vector2.new(0.5, 0.5)
 
 	Main:TweenSize(UDim2.new(0,585,0,400),"Out","Quad",0.4,true)
-	
-    local Top2 = Instance.new("Frame")
-    Top2.Name = "Top2"
+
+	local Top2 = Instance.new("Frame")
+	Top2.Name = "Top2"
 	Top2.Parent = Main
 	Top2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	Top2.BackgroundTransparency = 0
 	Top2.Position = UDim2.new(0, 0, 0, 0)
 	Top2.Size = UDim2.new(0, 585, 0, 45)
 
-    local UICorner_59 = Instance.new("UICorner")
-    UICorner_59.CornerRadius = UDim.new(0, 5)
+	local UICorner_59 = Instance.new("UICorner")
+	UICorner_59.CornerRadius = UDim.new(0, 5)
 	UICorner_59.Parent = Top2
 
 	local UIStroke96 = Instance.new("UIStroke")
@@ -442,7 +422,7 @@ function library:Evil(text,text2,logo)
 	UIStroke96.LineJoinMode = Enum.LineJoinMode.Round
 	UIStroke96.Color = _G.Color
 	UIStroke96.Transparency = 0.10
-	
+
 	Logo.Name = "Logo"
 	Logo.Parent = Main
 	Logo.Active = true
@@ -452,7 +432,7 @@ function library:Evil(text,text2,logo)
 	Logo.Position = UDim2.new(0, 10, 0, 10)
 	Logo.Size = UDim2.new(0, 30, 0, 30)
 	Logo.ImageTransparency = 0
-	Logo.Image = "rbxassetid://".._G.Logo
+	Logo.Image = "rbxassetid://16796378670"
 
 	Title.Name = "Title"
 	Title.Parent = Main
@@ -496,7 +476,7 @@ function library:Evil(text,text2,logo)
 	Top.BackgroundTransparency = 1
 	Top.Position = UDim2.new(0.021956088, 0, 0, 10)
 	Top.Size = UDim2.new(0, 565, 0, 39)
-	
+
 	local ClickFrame = Instance.new("Frame")
 	ClickFrame.Name = "Top"
 	ClickFrame.Parent = Main
@@ -578,7 +558,7 @@ function library:Evil(text,text2,logo)
 		FrameTab.Position = UDim2.new(0, 0, 0, 22)
 		--FrameTab.Size = UDim2.new(0, 80, 0, 2)
 		FrameTab.Size = UDim2.new(0, 0, 0, 2)
-        FrameTab.Visible = false
+		FrameTab.Visible = false
 
 		UICorner_Tab.CornerRadius = UDim.new(0, 3)
 		UICorner_Tab.Parent = FrameTab
@@ -676,7 +656,7 @@ function library:Evil(text,text2,logo)
 			ImageLabel.ImageTransparency = 0
 			ImageLabel.ImageColor3 = Color3.fromRGB(255, 255, 255)
 			FrameTab.Size = UDim2.new(0, 80, 0, 2)
-            FrameTab.Visible = true
+			FrameTab.Visible = true
 		end
 
 		Tab.MouseButton1Click:Connect(
@@ -703,7 +683,7 @@ function library:Evil(text,text2,logo)
 							TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 							{TextTransparency = 0.2}
 						):Play()
-                        TweenService:Create(
+						TweenService:Create(
 							x.FrameTab,
 							TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 							{Size = UDim2.new(0, 0, 0, 2)}
@@ -716,7 +696,7 @@ function library:Evil(text,text2,logo)
 							):Play()
 							y.Visible = false
 						end
-                        x.FrameTab.Visible = false
+						x.FrameTab.Visible = false
 					end
 				end
 				TweenService:Create(
@@ -739,12 +719,12 @@ function library:Evil(text,text2,logo)
 					TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 					{TextTransparency = 0}
 				):Play()
-                FrameTab.Visible = true
+				FrameTab.Visible = true
 				TweenService:Create(
-                    FrameTab,
-                    TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                    {Size = UDim2.new(0, 80, 0, 2)}
-                ):Play()
+					FrameTab,
+					TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+					{Size = UDim2.new(0, 80, 0, 2)}
+				):Play()
 				Page.Position = UDim2.new(0,0,0,1500)
 				TweenService:Create(
 					Page,
@@ -926,7 +906,7 @@ function library:Evil(text,text2,logo)
 				function textas:Refresh(newtext)
 					Text.Text = newtext
 				end
-                function textas:Color(Color)
+				function textas:Color(Color)
 					Text.TextColor3 = Color
 				end
 				return textas
@@ -1086,7 +1066,7 @@ function library:Evil(text,text2,logo)
 			end
 
 			function functionitem:Toggle(Name, default, callback)
-                local ToglFunc = {}
+				local ToglFunc = {}
 				local Tgo = default or false 
 				local MainToggle = Instance.new("Frame")
 				local UICorner = Instance.new("UICorner")
@@ -1156,7 +1136,7 @@ function library:Evil(text,text2,logo)
 					MainToggle_3.BackgroundColor3 = Color3.fromRGB(30, 50, 30)
 					MainToggle_3:TweenSize(UDim2.new(0, 20, 0, 20),"In","Quad",0.1,true)
 					MainToggle_3.Image = "http://www.roblox.com/asset/?id=6023426926"
-                    UICorner_3.CornerRadius = UDim.new(0, 100)
+					UICorner_3.CornerRadius = UDim.new(0, 100)
 					pcall(callback,true)
 				end
 
@@ -1166,20 +1146,20 @@ function library:Evil(text,text2,logo)
 						MainToggle_3.BackgroundColor3 = Color3.fromRGB(113, 255, 78)
 						MainToggle_3:TweenSize(UDim2.new(0, 25, 0, 25),"In","Quad",0.2,true)
 						MainToggle_3.Image = "http://www.roblox.com/asset/?id=6023426926"
-                        UICorner_3.CornerRadius = UDim.new(0, 100)
+						UICorner_3.CornerRadius = UDim.new(0, 100)
 					else
 						Tgo = false
 						MainToggle_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 						MainToggle_3.Image = "http://www.roblox.com/asset/?id=00"
 						MainToggle_3:TweenSize(UDim2.new(0, 25, 0, 25),"In","Quad",0.2,true)
-                        UICorner_3.CornerRadius = UDim.new(0, 5)
+						UICorner_3.CornerRadius = UDim.new(0, 5)
 					end
 					CircleClick(TextButton, Mouse.X, Mouse.Y)
 					pcall(callback,Tgo)
 				end)
 
 				return ToglFunc
-            end
+			end
 
 			function functionitem:Textbox(Name, Placeholder, callback)
 				local Textbox = Instance.new("Frame")
@@ -1242,9 +1222,9 @@ function library:Evil(text,text2,logo)
 				HeadTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 				HeadTitle.TextSize = 13.000
 				HeadTitle.TextXAlignment = Enum.TextXAlignment.Center
-				
+
 				local ButtonColor44 = Instance.new("UIStroke")
-				
+
 				ButtonColor44.Thickness = 1.6
 				ButtonColor44.Name = ""
 				ButtonColor44.Parent = HeadTitle
@@ -1252,16 +1232,16 @@ function library:Evil(text,text2,logo)
 				ButtonColor44.LineJoinMode = Enum.LineJoinMode.Round
 				ButtonColor44.Color = _G.Color
 				ButtonColor44.Transparency = 0
-				
+
 				HeadTitle.FocusLost:Connect(
-				function(ep)
-					if ep then
-						if #HeadTitle.Text > 0 then
-							callback(HeadTitle.Text)
-							HeadTitle.Text = HeadTitle.Text
+					function(ep)
+						if ep then
+							if #HeadTitle.Text > 0 then
+								callback(HeadTitle.Text)
+								HeadTitle.Text = HeadTitle.Text
+							end
 						end
-					end
-				end)
+					end)
 			end
 
 			function functionitem:Dropdown(text, list, default, callback)
@@ -1801,7 +1781,7 @@ function library:Evil(text,text2,logo)
 				ConneValue.Position = UDim2.new((de or 0)/max, 0.5, 0.5,0, 0)
 				ConneValue.Size = UDim2.new(0, 10, 0, 10)
 				ConneValue.BorderSizePixel = 0
-	
+
 				local UICorner = Instance.new("UICorner")
 				UICorner.CornerRadius = UDim.new(0, 10)
 				UICorner.Parent = ConneValue
@@ -1877,36 +1857,36 @@ function library:Evil(text,text2,logo)
 							dragging = false
 						end
 					end)
-					game:GetService("UserInputService").InputChanged:Connect(function(input)
-						if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-							move(input)
-						end
-					end)
-					CustomValue.FocusLost:Connect(function()
-						if CustomValue.Text == "" then
-							CustomValue.Text  = de
-						end
-						if  tonumber(CustomValue.Text) > max then
-							CustomValue.Text  = max
-						end
-						MainValue:TweenSize(UDim2.new((CustomValue.Text or 0) / max, 0, 0, 5), "Out", "Sine", 0.2, true)
-						ConneValue:TweenPosition(UDim2.new((CustomValue.Text or 0)/max, 0,0.6, 0) , "Out", "Sine", 0.2, true)
-						if floor == true then
-							CustomValue.Text = tostring(CustomValue.Text and string.format("%.0f",(CustomValue.Text / max) * (max - min) + min) )
-						else
-							CustomValue.Text = tostring(CustomValue.Text and math.floor( (CustomValue.Text / max) * (max - min) + min) )
-						end
-						pcall(callback, CustomValue.Text)
-					end)
-					
-					function sliderfunc:Update(value)
-						MainValue:TweenSize(UDim2.new((value or 0) / max, 0, 0, 5), "Out", "Sine", 0.2, true)
-						ConneValue:TweenPosition(UDim2.new((value or 0)/max, 0.5, 0.5,0, 0) , "Out", "Sine", 0.2, true)
-						CustomValue.Text = value
-						pcall(function()
-							callback(value)
-						end)
+				game:GetService("UserInputService").InputChanged:Connect(function(input)
+					if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+						move(input)
 					end
+				end)
+				CustomValue.FocusLost:Connect(function()
+					if CustomValue.Text == "" then
+						CustomValue.Text  = de
+					end
+					if  tonumber(CustomValue.Text) > max then
+						CustomValue.Text  = max
+					end
+					MainValue:TweenSize(UDim2.new((CustomValue.Text or 0) / max, 0, 0, 5), "Out", "Sine", 0.2, true)
+					ConneValue:TweenPosition(UDim2.new((CustomValue.Text or 0)/max, 0,0.6, 0) , "Out", "Sine", 0.2, true)
+					if floor == true then
+						CustomValue.Text = tostring(CustomValue.Text and string.format("%.0f",(CustomValue.Text / max) * (max - min) + min) )
+					else
+						CustomValue.Text = tostring(CustomValue.Text and math.floor( (CustomValue.Text / max) * (max - min) + min) )
+					end
+					pcall(callback, CustomValue.Text)
+				end)
+
+				function sliderfunc:Update(value)
+					MainValue:TweenSize(UDim2.new((value or 0) / max, 0, 0, 5), "Out", "Sine", 0.2, true)
+					ConneValue:TweenPosition(UDim2.new((value or 0)/max, 0.5, 0.5,0, 0) , "Out", "Sine", 0.2, true)
+					CustomValue.Text = value
+					pcall(function()
+						callback(value)
+					end)
+				end
 				return sliderfunc
 			end
 			return functionitem
